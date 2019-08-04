@@ -61,6 +61,11 @@ public class TimerController extends HttpServlet {
 				return;
 			}
 			time.resetTimer();
+			currentWatch.getTimer()
+			.get(currentWatch.getTimer().size() - 1)
+			.resetTimer();
+			session.setAttribute("currentTime", time);
+			session.setAttribute("Timers", currentWatch);
 		}
 		request.setAttribute("time", currentWatch.getTimer());
 		

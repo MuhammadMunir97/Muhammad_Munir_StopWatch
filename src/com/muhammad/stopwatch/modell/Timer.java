@@ -71,6 +71,5 @@ public class Timer implements Serializable{
 	
 	public void resetTimer() {
 		this.startTime = Instant.now();
-		this.endTime = null;
 	}
 }
